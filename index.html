@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Kitab Al-Ilmiyyah</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+   <style>
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4677ac;
+            color: white;
+            padding: 15px 0;
+        }
+        .navbar-brand {
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand img {
+            width: 100px; /* Atur ukuran logo */
+            height: auto; /* Menjaga proporsi logo */
+            margin-right: 10px; /* Jarak antara logo dan nama */
+        }
+        .search-bar input {
+            margin-right: 10px;
+            border-radius: 20px;
+        }
+        .search-bar button {
+            border-radius: 20px;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-img-top {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .card-title {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .card-text {
+            font-size: 0.9em;
+        }
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+        .carousel-item img {
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .category-link {
+            cursor: pointer;
+        }
+        .category-link:hover {
+            text-decoration: underline;
+        }
+        .badge-info {
+            background-color: #406b98;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images1.jpeg" alt="Logo Toko">
+                Toko Kitab Al-Ilmiyyah
+            </a>
+            <div class="search-bar d-flex">
+                <input type="text" id="search-input" placeholder="Cari buku..." class="form-control">
+                <button type="button" class="btn btn-light">Cari</button>
+            </div>
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#categories">Kategori</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#bestseller-books">Buku Terlaris</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#discount-books">Buku Diskon</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#catalog">Katalog Buku</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container my-4">
+        <!-- Featured Books Carousel -->
+        <div id="home" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class ="carousel-item active">
+                    <img src="awal1.jfif" class="d-block w-100" alt="Featured Book 1">
+                    <div class="carousel-caption d-none d-md-block"></div>
+                </div>
+                <div class="carousel-item">
+                    <img src="awal2.jfif" class="d-block w-100" alt="Featured Book 2">
+                    <div class="carousel-caption d-none d-md-block"></div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#home" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#home" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- Categories Section -->
+        <h3 id="categories" class="my-4">Pilih Kategori Buku</h3>
+        <div class="d-flex flex-wrap justify-content-start mb-4">
+            <span class="badge badge-pill badge-info category-link">Matan Renggang</span>
+            <span class="badge badge-pill badge-info category-link ml-2">Kitab Murah Kurasan</span>
+            <span class="badge badge-pill badge-info category-link ml-2">Dar Fath Yordan</span>
+            <span class="badge badge-pill badge-info category-link ml-2">Dar al Minhaj</span>
+            <span class="badge badge-pill badge-info category-link ml-2">Darul Faiha SIRIA</span>
+            <span class="badge badge-pill badge-info category-link ml-2">Parfum AL ILMIYYAH</span>
+            <span class="badge badge-pill badge-info category-link ml-2">Dar Rohmah Islamiyyah</span>
+            <span class="badge badge-pill badge-info category-link ml-2">Karya Abuya Maliky</span>
+            <span class="badge badge-pill badge-info category-link ml-2">MUASSAHAH AR RISALAH</span>
+            <span class="badge badge-pill badge-info category-link ml-2">Tafsir / ILMU TAFSIR</span>
+            <span class="badge badge-pill badge-info category-link ml-2">Kutubu Sittah</span>
+            <span class="badge badge-pill badge-info category-link ml-2">Tarihk / sirot</span>
+            <span class="badge badge-pill badge-info category-link ml-2">Tasawwuf & Adab & zuhud</span>
+            <span class="badge badge-pill badge-info category-link ml-2">Mantiq & Balaghoh</span>
+            <span class="badge badge-pill badge-info category-link ml-2">Nahwu / Lugoh</span>
+            <span class="badge badge-pill badge-info category-link ml-2">FIQIH & USHUL FIQIH</span>
+
+        </div>
+
+        <!-- Bestseller Books Section -->
+        <h3 id="bestseller-books" class="text-center my-4">Buku Terlaris</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr1.webp" class="card-img-top" alt="Buku Terlaris1">
+                    <div class="card-body">
+                        <h5 class="card-title">MATAN RENGGANG WASHIYATUL MUSTHOFA</h5>
+                        <p class="card-text">Harga: Rp 4.200</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr2.webp" class="card-img-top" alt="Buku Terlaris 2">
+                    <div class="card-body">
+                        <h5 class="card-title">AL ASYBAH WANADZOIR</h5> 
+                        <p class="card-text">Harga: Rp 270.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr3.webp" class="card-img-top" alt="Buku Terlaris 3">
+                    <div class="card-body">
+                        <h5 class="card-title">MATAN SULLAM MUNAWARROQ</h5>
+                        <p class="card-text">Harga: Rp 2.160</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr4.webp" class="card-img-top" alt="Buku Terlaris 4">
+                    <div class="card-body">
+                        <h5 class="card-title">MATAN SAFINAH SAFINATUN NAJAH</h5>
+                        <p class="card-text">Harga: Rp 2.550</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr5.webp" class="card-img-top" alt="Buku Terlaris 5">
+                    <div class="card-body">
+                        <h5 class="card-title">LATHOIFUL ISYAROT</h5>
+                        <p class="card-text">Harga: Rp 6.650</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr6.webp" class="card-img-top" alt="Buku Terlaris 6">
+                    <div class="card-body">
+                        <h5 class="card-title">SYARAH TIJAN DURORY</h5>
+                        <p class="card-text">Harga: Rp 3.500</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr7.webp" class="card-img-top" alt="Buku Terlaris 7">
+                    <div class="card-body">
+                        <h5 class="card-title">KASIFATUS SAJA</h5>
+                        <p class="card-text">Harga: Rp 4.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr8.webp" class="card-img-top" alt="Buku Terlaris 8">
+                    <div class="card-body">
+                        <h5 class="card-title">HASYIAH SYOBAN</h5>
+                        <p class="card-text">Harga: Rp 445.550</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+ <!-- Bestseller Books Section -->
+ <h3 id="bestseller-books" class="text-center my-4">Matan Renggang</h3>
+ <div class="row">
+     <div class="col-md-3">
+         <div class="card">
+             <img src="mr1.webp" class="card-img-top" alt="Matan Renggang 1">
+             <div class="card-body">
+                 <h5 class="card-title">KITAB MATAN TALIMUL MUTAA'LIM</h5>
+
+                 <p class="card-text">Harga: Rp 6.000</p>
+                 <button class="btn btn-custom">BELI</button>
+             </div>
+         </div>
+     </div>
+     <div class="col-md-3">
+         <div class="card">
+             <img src="mr2.webp" class="card-img-top" alt="Matan Renggang 2">
+             <div class="card-body">
+                 <h5 class="card-title">MATAN SAFINAH RENGGANG MATAN SAFINUN NAJAH</h5> 
+                 <p class="card-text">Harga: Rp 2.550</p>
+                 <button class="btn btn-custom">BELI</button>
+             </div>
+         </div>
+     </div>
+     <div class="col-md-3">
+         <div class="card">
+             <img src="mr3.webp" class="card-img-top" alt="Matan Renggang 3">
+             <div class="card-body">
+                 <h5 class="card-title">MATAN RENGGANG BIDAYATUL HIDAYAH</h5>
+                 <p class="card-text">Harga: Rp 9.500</p>
+                 <button class="btn btn-custom">BELI</button>
+             </div>
+         </div>
+     </div>
+     <div class="col-md-3">
+         <div class="card">
+             <img src="mr4.webp" class="card-img-top" alt="Matan Renggang 4">
+             <div class="card-body">
+                 <h5 class="card-title">MATAN RENGGANG RIYADUL BADIAH</h5>
+                 <p class="card-text">Harga: Rp 7.500</p>
+                 <button class="btn btn-custom">BELI</button>
+             </div>
+         </div>
+     </div>
+ </div>
+ <div class="row">
+     <div class="col-md-3">
+         <div class="card">
+             <img src="mr5.webp" class="card-img-top" alt="Matan Renggang 5">
+             <div class="card-body">
+                 <h5 class="card-title">MATAN RENGGANG SULLAMUT TAUFIQ</h5>
+                 <p class="card-text">Harga: Rp 4.500</p>
+                 <button class="btn btn-custom">BELI</button>
+             </div>
+         </div>
+     </div>
+     <div class="col-md-3">
+         <div class="card">
+             <img src="mr6.webp" class="card-img-top" alt="Matan Renggang 6">
+             <div class="card-body">
+                 <h5 class="card-title">MATAN RENGGANG ARBAIN NAWAWI</h5>
+                 <p class="card-text">Harga: Rp 3.400</p>
+                 <button class="btn btn-custom">BELI</button>
+             </div>
+         </div>
+     </div>
+     <div class="col-md-3">
+         <div class="card">
+             <img src="mr7.webp" class="card-img-top" alt="Matan Renggang 7">
+             <div class="card-body">
+                 <h5 class="card-title">MATAN RENGGANG TAISIRUL KHALLAQ</h5>
+                 <p class="card-text">Harga: Rp 4.000</p>
+                 <button class="btn btn-custom">BELI</button>
+             </div>
+         </div>
+     </div>
+     <div class="col-md-3">
+         <div class="card">
+             <img src="mr8.webp" class="card-img-top" alt="Matan Renggang 8">
+             <div class="card-body">
+                 <h5 class="card-title">MATAN RENGGANG WASHOYA AL ABA</h5>
+                 <p class="card-text">Harga: Rp 4.550</p>
+                 <button class="btn btn-custom">BELI</button>
+             </div>
+         </div>
+     </div>
+ </div>
+        <!-- Discount Books Section -->
+        <h3 id="discount-books" class="text-center my-4">Buku Diskon</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr1.webp" class="card-img-top" alt="Buku Diskon 1">
+                    <div class="card-body">
+                        <h5 class=" card-title">Buku Diskon 1</h5>
+                        <p class="card-text">Penulis: Penulis 1</p>
+                        <p class="card-text"><del>Rp 150.000</del> <span class="text-success">Rp 90.000</span></p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr2.webp" class="card-img-top" alt="Buku Diskon 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Diskon 2</h5>
+                        <p class="card-text">Penulis: Penulis 2</p>
+                        <p class="card-text"><del>Rp 200.000</del> <span class="text-success">Rp 120.000</span></p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr3.webp" class="card-img-top" alt="Buku Diskon 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Diskon 3</h5>
+                        <p class="card-text">Penulis: Penulis 3</p>
+                        <p class="card-text"><del>Rp 175.000</del> <span class="text-success">Rp 100.000</span></p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr4.webp" class="card-img-top" alt="Buku Diskon 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Diskon 4</h5>
+                        <p class="card-text">Penulis: Penulis 4</p>
+                        <p class="card-text"><del>Rp 180.000</del> <span class="text-success">Rp 85.000</span></p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr5.webp" class="card-img-top" alt="Buku Diskon 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Diskon 5</h5>
+                        <p class="card-text">Penulis: Penulis 5</p>
+                        <p class="card-text"><del>Rp 140.000</del> <span class="text-success">Rp 75.000</span></p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr2.webp" class="card-img-top" alt="Buku Diskon 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Diskon 6</h5>
+                        <p class="card-text">Penulis: Penulis 6</p>
+                        <p class="card-text"><del>Rp 165.000</del> <span class="text-success">Rp 95.000</span></p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr3.webp" class="card-img-top" alt="Buku Diskon 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Diskon 7</h5>
+                        <p class="card-text">Penulis: Penulis 7</p>
+                        <p class="card-text"><del>Rp 190.000</del> <span class="text-success">Rp 100.000</span></p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="tr1.webp" class="card-img-top" alt="Buku Diskon 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Diskon 8</h5>
+                        <p class="card-text">Penulis: Penulis 8</p>
+                        <p class="card-text"><del>Rp 220.000</del> <span class="text-success">Rp 120.000</span></p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Katalog Buku Section -->
+        <h3 id="catalog" class="text-center my-4">Katalog Buku</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Buku Katalog 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Katalog 1</h5>
+                        <p class="card-text">Penulis: Penulis 1</p>
+                        <p class="card-text">Harga: Rp 120.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Buku Katalog 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Katalog 2</h5>
+                        <p class="card-text">Penulis: Penulis 2</p>
+                        <p class="card-text">Harga: Rp 135.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Buku Katalog 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Katalog 3</h5>
+                        <p class="card-text">Penulis: Penulis 3</p>
+                        <p class="card-text">Harga: Rp 125.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Buku Katalog 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Katalog 4</h5>
+                        <p class="card-text">Penulis: Penulis 4</p>
+                        <p class="card-text">Harga: Rp 110.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Buku Katalog 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Katalog 5</h5>
+                        <p class="card-text">Penulis: Penulis 5</p>
+                        <p class="card-text">Harga: Rp 140.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Buku Katalog 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Katalog 6</h5>
+                        <p class="card-text">Penulis: Penulis 6</p>
+                        <p class="card-text">Harga: Rp 115.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Buku Katalog 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Katalog 7</h5>
+                        <p class="card-text">Penulis: Penulis 7</p>
+                        <p class="card-text">Harga: Rp 130.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Buku Katalog 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Katalog 8</h5>
+                        <p class="card-text">Penulis: Penulis 8</p>
+                        <p class="card-text">Harga: Rp 125.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Buku Katalog 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Katalog 9</h5>
+                        <p class="card-text">Penulis: Penulis 9</p>
+                        <p class="card-text">Harga: Rp 100.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Buku Katalog 10">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Katalog 10</h5>
+                        <p class="card-text">Penulis: Penulis 10</p>
+                        <p class="card-text">Harga: Rp 110.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Buku Katalog 11">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Katalog 11</h5>
+                        <p class="card-text">Penulis: Penulis 11</p>
+                        <p class="card-text">Harga: Rp 140.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Buku Katalog 12">
+                    <div class="card-body">
+                        <h5 class="card-title">Buku Katalog 12</h5>
+                        <p class="card-text">Penulis: Penulis 12</p>
+                        <p class="card-text">Harga: Rp 120.000</p>
+                        <button class="btn btn-custom">BELI</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination (For Catalog) -->
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Toko Kitab Al-Ilmiyyah</p>
+            <p><a href="#" style="color: white;">Terms & Conditions</a> | <a href="#" style="color: white;">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
